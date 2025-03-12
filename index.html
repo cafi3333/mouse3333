@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>비에고 소개</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: white;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #1e1e1e;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+        }
+        img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .skills {
+            margin-top: 20px;
+        }
+        button {
+            background-color: #00aaff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #0088cc;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>비에고 - 몰락한 왕</h1>
+        <img src="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Viego_0.jpg" alt="비에고">
+        <p>비에고는 리그 오브 레전드의 챔피언으로, 몰락한 왕이라는 별명을 가지고 있습니다. 그는 죽은 연인을 되살리기 위해 그림자 군도를 떠돌며 영혼을 지배합니다.</p>
+        <div class="skills">
+            <h2>스킬</h2>
+            <button onclick="showSkill('passive')">패시브 - 왕의 지배</button>
+            <button onclick="showSkill('q')">Q - 몰락한 검</button>
+            <button onclick="showSkill('w')">W - 망령의 나선</button>
+            <button onclick="showSkill('e')">E - 안개 길</button>
+            <button onclick="showSkill('r')">R - 심장의 강타</button>
+            <p id="skillDescription"></p>
+        </div>
+    </div>
+    <script>
+        function showSkill(skill) {
+            const descriptions = {
+                passive: "비에고는 적을 처치하면 잠시 동안 그들의 몸을 빼앗아 사용할 수 있습니다.",
+                q: "비에고가 검을 휘둘러 피해를 주고 체력을 흡수합니다.",
+                w: "비에고가 안개를 모아 돌진하며 기절 효과를 줍니다.",
+                e: "비에고가 주변에 안개를 퍼뜨려 이동 속도를 증가시킵니다.",
+                r: "비에고가 목표 지점으로 도약해 적을 처치하고 추가 피해를 줍니다."
+            };
+            document.getElementById("skillDescription").textContent = descriptions[skill];
+        }
+    </script>
+</body>
+</html>
+
